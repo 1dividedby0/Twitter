@@ -14,6 +14,7 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var tableView: UITableView!
     var tweets = [Tweet]()
     var refreshControl: UIRefreshControl!
+    var selectedTweet:Tweet!
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -32,6 +33,12 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tweets.count
+    }
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var tweet = tweets[indexPath.row]
+        self.selectedTweet = tweet
+        println(tweet.text)
+        performSegueWithIdentifier("detailsSegue", sender: self)
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell: TweetTableViewCell = tableView.dequeueReusableCellWithIdentifier("TweetCell") as TweetTableViewCell
@@ -68,14 +75,18 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
     }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "detailsSegue"{
+        let detailsViewController = segue.destinationViewController as? TweetDetailsViewController
+            println(segue.destinationViewController is UINavigationController)
+            detailsViewController?.tweet = self.selectedTweet
+            
+        }
     }
-    */
+    
 
 }
