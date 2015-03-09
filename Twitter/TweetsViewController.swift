@@ -25,6 +25,7 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.refreshControl.addTarget(self, action: "refresh", forControlEvents: UIControlEvents.ValueChanged)
         self.tableView.addSubview(refreshControl)
         getHomeTimeline()
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -50,6 +51,7 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let profileURL = NSURL(string: user.profileImageURL!)
         var data = NSData(contentsOfURL: profileURL!)
         cell.profileImageView.image = UIImage(data: data!)
+        cell.tweetTextLabel.numberOfLines = 0
         return cell
     }
     func refresh(){

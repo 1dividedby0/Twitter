@@ -8,8 +8,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TweetCell" rowHeight="147" id="KGk-i7-Jjw" customClass="TweetTableViewCell" customModule="Twitter" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="147"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TweetCell" rowHeight="111" id="KGk-i7-Jjw" customClass="TweetTableViewCell" customModule="Twitter" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="111"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -30,33 +30,34 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qaO-il-fwD">
-                        <rect key="frame" x="8" y="13" width="70" height="69"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="70" id="RrZ-OP-4vJ"/>
-                        </constraints>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Did you know you can tell if someone is a programmer simply by saying the word &quot;timezones&quot; and seeing if they cringe?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jl2-k7-OTC">
                         <rect key="frame" x="81" y="32" width="231" height="67"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qaO-il-fwD">
+                        <rect key="frame" x="8" y="13" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="RrZ-OP-4vJ"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="qaO-il-fwD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="6VA-zU-lu1"/>
+                    <constraint firstItem="jl2-k7-OTC" firstAttribute="leading" secondItem="qaO-il-fwD" secondAttribute="trailing" constant="13" id="6dF-zZ-ao6"/>
                     <constraint firstItem="jl2-k7-OTC" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="8Ct-O3-tOW"/>
                     <constraint firstItem="jl2-k7-OTC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="24" id="923-q3-u8q"/>
-                    <constraint firstItem="qaO-il-fwD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="Fen-qJ-MVj"/>
                     <constraint firstAttribute="trailing" secondItem="DYP-z7-vJe" secondAttribute="trailing" constant="26" id="LTP-mh-7UY"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="qaO-il-fwD" secondAttribute="bottom" constant="56.5" id="LbX-aq-FWk"/>
                     <constraint firstItem="DYP-z7-vJe" firstAttribute="baseline" secondItem="G4Z-QB-3ng" secondAttribute="baseline" id="LdK-3B-O4B"/>
-                    <constraint firstItem="G4Z-QB-3ng" firstAttribute="leading" secondItem="qaO-il-fwD" secondAttribute="trailing" constant="2" id="dnt-Uv-unK"/>
+                    <constraint firstItem="qaO-il-fwD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="YZV-Dt-9NU"/>
+                    <constraint firstItem="G4Z-QB-3ng" firstAttribute="leading" secondItem="qaO-il-fwD" secondAttribute="trailing" constant="12" id="dnt-Uv-unK"/>
                     <constraint firstItem="DYP-z7-vJe" firstAttribute="firstBaseline" secondItem="G4Z-QB-3ng" secondAttribute="firstBaseline" id="fzG-46-xQg"/>
                     <constraint firstItem="DYP-z7-vJe" firstAttribute="leading" secondItem="G4Z-QB-3ng" secondAttribute="trailing" constant="1" id="h4u-1g-ux0"/>
                     <constraint firstItem="DYP-z7-vJe" firstAttribute="leading" secondItem="G4Z-QB-3ng" secondAttribute="trailing" constant="1" id="isB-un-lgq"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="jl2-k7-OTC" secondAttribute="bottom" constant="13" id="oNh-dw-2m5"/>
-                    <constraint firstItem="jl2-k7-OTC" firstAttribute="leading" secondItem="qaO-il-fwD" secondAttribute="trailing" constant="3" id="zRQ-0a-LCS"/>
+                    <constraint firstItem="qaO-il-fwD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="k0e-iQ-QgC"/>
+                    <constraint firstAttribute="bottom" secondItem="jl2-k7-OTC" secondAttribute="bottom" constant="11.5" id="nN5-b2-UFy"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="qaO-il-fwD" secondAttribute="bottom" constant="29.5" id="w74-o0-M3V"/>
                     <constraint firstItem="G4Z-QB-3ng" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="zxL-OI-E29"/>
                 </constraints>
             </tableViewCellContentView>
@@ -66,7 +67,7 @@
                 <outlet property="profileImageView" destination="qaO-il-fwD" id="maN-JS-fyx"/>
                 <outlet property="tweetTextLabel" destination="jl2-k7-OTC" id="dvO-lG-BfM"/>
             </connections>
-            <point key="canvasLocation" x="281" y="354.5"/>
+            <point key="canvasLocation" x="281" y="336.5"/>
         </tableViewCell>
     </objects>
 </document>

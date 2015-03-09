@@ -19,12 +19,13 @@ class TweetDetailsViewController: UIViewController {
     var tweet:Tweet?
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Tweet"
         user = tweet?.user
         self.textLabel.text = tweet?.text
-        self.screenNameLabel.text = user?.screenname
-        self.otherNameLabel.text = user?.name
-        //var data = NSData(contentsOfURL: NSURL(string: user!.profileImageURL!)!)!
-        //self.profileImageView.image = UIImage(data: data)
+        self.screenNameLabel.text = user?.name
+        self.otherNameLabel.text = user?.screenname
+        var data = NSData(contentsOfURL: NSURL(string: user!.profileImageURL!)!)!
+        self.profileImageView.image = UIImage(data: data)
     }
 
     override func didReceiveMemoryWarning() {

@@ -36,7 +36,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="cV0-dw-cJZ"/>
                     <connections>
-                        <segue destination="g27-Pw-lYi" kind="push" id="zAl-hQ-BnQ"/>
+                        <segue destination="g27-Pw-lYi" kind="push" identifier="loginSegue" id="zAl-hQ-BnQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -141,29 +141,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Michael Moran" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4Y-GA-TKd">
-                                <rect key="frame" x="84" y="126" width="114" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Michael Moran" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4Y-GA-TKd">
+                                <rect key="frame" x="84" y="126" width="178" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="@TheMichaelMoran" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJF-EZ-6H9">
-                                <rect key="frame" x="84" y="146" width="152" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@TheMichaelMoran" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJF-EZ-6H9">
+                                <rect key="frame" x="84" y="146" width="178" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I have seen the future of newspapers: http://t.co/UfmWt2OTCP" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hat-wI-Mau">
-                                <rect key="frame" x="16" y="175" width="288" height="42"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I have seen the future of newspapers: http://t.co/UfmWt2OTCP" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hat-wI-Mau">
+                                <rect key="frame" x="16" y="175" width="288" height="46"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mbx-PV-gMu">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mbx-PV-gMu">
                                 <rect key="frame" x="16" y="107" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="ShJ-8y-kPf"/>
+                                    <constraint firstAttribute="width" constant="60" id="zdz-Wq-94g"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mbx-PV-gMu" firstAttribute="top" secondItem="IvA-w5-sof" secondAttribute="bottom" constant="43" id="1v0-c1-gmb"/>
+                            <constraint firstItem="Hat-wI-Mau" firstAttribute="leading" secondItem="1vX-ra-3ch" secondAttribute="leading" constant="16" id="9jc-se-71y"/>
+                            <constraint firstItem="s8q-uJ-T5H" firstAttribute="top" relation="lessThanOrEqual" secondItem="Hat-wI-Mau" secondAttribute="bottom" constant="347" id="Ddx-VY-wzC"/>
+                            <constraint firstItem="g4Y-GA-TKd" firstAttribute="trailing" secondItem="fJF-EZ-6H9" secondAttribute="trailing" id="JjF-Gf-z6H"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="g4Y-GA-TKd" secondAttribute="trailing" constant="42" id="T1A-FZ-1zR"/>
+                            <constraint firstItem="g4Y-GA-TKd" firstAttribute="leading" secondItem="mbx-PV-gMu" secondAttribute="trailing" constant="8" symbolic="YES" id="ZR7-aU-l1n"/>
+                            <constraint firstItem="mbx-PV-gMu" firstAttribute="bottom" secondItem="fJF-EZ-6H9" secondAttribute="bottom" id="c09-Ra-TGe"/>
+                            <constraint firstAttribute="trailing" secondItem="Hat-wI-Mau" secondAttribute="trailing" constant="16" id="e1d-FV-JdE"/>
+                            <constraint firstItem="Hat-wI-Mau" firstAttribute="top" secondItem="g4Y-GA-TKd" secondAttribute="bottom" constant="28" id="jsO-Ev-4CR"/>
+                            <constraint firstItem="mbx-PV-gMu" firstAttribute="leading" secondItem="Hat-wI-Mau" secondAttribute="leading" id="mJX-S3-WI8"/>
+                            <constraint firstItem="Hat-wI-Mau" firstAttribute="top" secondItem="mbx-PV-gMu" secondAttribute="bottom" constant="8" id="yIn-bs-O2m"/>
+                            <constraint firstItem="g4Y-GA-TKd" firstAttribute="top" secondItem="IvA-w5-sof" secondAttribute="bottom" constant="62" id="yoZ-La-TJl"/>
+                            <constraint firstItem="fJF-EZ-6H9" firstAttribute="leading" secondItem="mbx-PV-gMu" secondAttribute="trailing" constant="8" symbolic="YES" id="zgr-bu-AwW"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ITN-Zr-GFC"/>
                     <connections>
@@ -276,6 +295,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="FX1-k9-qXW"/>
+        <segue reference="eVo-qf-JrA"/>
     </inferredMetricsTieBreakers>
 </document>
